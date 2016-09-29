@@ -7,7 +7,8 @@
     <meta name="description" content="Coffeegen : Generates coffee recipes">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="./javascripts/main.js"></script>
     <title>Coffeegen</title>
   </head>
 
@@ -18,8 +19,8 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/cgibbs/CoffeeGen">View on GitHub</a>
 
-          <h1 id="project_title">Coffeegen</h1>
-          <h2 id="project_tagline">Generates coffee recipes</h2>
+          <h1 id="project_title">Café Génération</h1>
+          <h2 id="project_tagline">Generated coffee recipes, like they made in the old country</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/cgibbs/CoffeeGen/zipball/master">Download this project as a .zip file</a>
@@ -32,9 +33,11 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h3>
-<a id="coffeegen" class="anchor" href="#coffeegen" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CoffeeGen</h3>
+<a id="coffeegen" class="anchor" href="#coffeegen" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Café Génération</h3>
 
-<p>Stuff goes here.</p>
+<div id="recipe"></div>
+<br>
+<button id="genRecipe" onClick="window.location.reload()">Try a Different Recipe</button>
       </section>
     </div>
 
@@ -46,7 +49,7 @@
       </footer>
     </div>
 
-    
+
 
   </body>
 </html>
