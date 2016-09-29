@@ -26,14 +26,14 @@ function makeRecipe() {
   let cup = cups[Math.floor(Math.random() * cups.length)];
 
   for (i = 0; i < Math.floor(Math.random() * 2) + 1; i++) {
-    ingredients.push(Math.floor(Math.random() * 3 + 1).toString() + " oz " + bases[Math.floor(Math.random() * bases.length)]);
+    ingredients.push(Math.floor(Math.random() * 4 + 1).toString() + " oz " + bases[Math.floor(Math.random() * bases.length)]);
   }
+
+  ingredients.push(Math.floor(Math.random() * 5 + 1).toString() + " oz " + lac);
 
   for (i = 0; i < Math.floor(Math.random() * 3); i++) {
     ingredients.push(flavors[Math.floor(Math.random() * flavors.length)]);
   }
-
-  ingredients.push(lac);
 
   for (i = 0; i < Math.floor(Math.random() * 3); i++) {
     tops.push(toppers[Math.floor(Math.random() * toppers.length)]);
@@ -42,7 +42,8 @@ function makeRecipe() {
   let s = "Combine the following in a " + cup + ":<br>";
   s +=  uniq(ingredients).join('<br>');
   if (tops.length > 0)
-    s += "<br>And top with " + uniq(tops).join(" and ");
+    s += "<br>Top with " + uniq(tops).join(" and ") + ", and serve hot.";
+  else s += "<br> Serve hot.";
   return s;
 }
 
