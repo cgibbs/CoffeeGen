@@ -20,14 +20,17 @@ function uniq(a) {
 }
 
 function makeRecipe() {
-  let ingredients = []
-  let tops = []
+  let bas = [];
+  let flavs = [];
+  let tops = [];
   let lac = lactose[Math.floor(Math.random() * lactose.length)];
   let cup = cups[Math.floor(Math.random() * cups.length)];
 
   for (i = 0; i < Math.floor(Math.random() * 2) + 1; i++) {
-    ingredients.push(Math.floor(Math.random() * 4 + 1).toString() + " oz " + bases[Math.floor(Math.random() * bases.length)]);
+    bas.push(bases[Math.floor(Math.random() * bases.length)]);
   }
+
+  let ingredients = uniq(bas).map(ing => Math.floor(Math.random() * 4 + 1).toString() + " oz " + ing);
 
   ingredients.push(Math.floor(Math.random() * 5 + 1).toString() + " oz " + lac);
 
