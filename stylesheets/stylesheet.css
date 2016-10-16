@@ -368,7 +368,9 @@ Full-Width Styles
   background: #212121;
 }
 
+.btn-mobile-switch {
 
+}
 
 /*******************************************************************************
 Small Device Styles
@@ -420,6 +422,10 @@ Small Device Styles
     min-width: 320px;
     max-width: 480px;
     font-size: 11px;
+  }
+
+  .btn-mobile-switch {
+    font-size: 16px;
   }
 
 }
