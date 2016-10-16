@@ -1,7 +1,10 @@
 const bases = ["Coffee", "Coffee", "Coffee", "Chicory", "Hot Water", "Ristretto", "Espresso", "Hot Chocolate"];
 const flavors = ["Mocha Syrup", "French Vanilla Creamer", "Brown Sugar", "Chai Spice", "Irish Whiskey", "Cherries", "Caramel"];
 const toppers = ["Chili Powder", "Coffee Foam", "Shaved Chocolate", "Milk Foam", "Pumpkin Spice", "Whipped Cream"];
-const lactose = ["Cream", "Half and Half", "Condensed Milk", "Steamed Milk", "Ice Cream", "Warm Milk", "Milk"];
+// makes ice cream less likely, because that shouldn't be in every seventh recipe
+const lactose_pre = ["Cream", "Half and Half", "Condensed Milk", "Steamed Milk", "Warm Milk", "Milk"];
+const lactose = lactose_pre.concat(lactose_pre);
+lactose.push("Ice Cream");
 const cups = ["Mug", "Small Tumbler", "Large Tumbler", "Cappucino Cup", "Glass Demitasse", "Irish Coffee Glass", "Latte Glass"];
 
 function uniq(a) {
